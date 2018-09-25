@@ -1,0 +1,109 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+.top_line
+  display: flex
+  flex-direction: row
+  align-items: baseline
+  justify-content: space-between
+  padding: 20px
+  background-color: #546e7a
+  color: #ffab40
+  font-size: 20px
+.wrap
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  align-items: center
+  font-size: 30px
+  font-weight: bold
+  padding: 20px
+  width: 300px
+  margin: auto
+
+  .str
+    font-size: 30px
+    display: inline-block
+    margin: 0 auto
+.res
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-around
+  width: 500px
+  margin: 0 auto
+  padding-top: 150px
+  .otvet
+    display: inline-block
+    font-size: 30px
+    margin: 0 20px 0 0
+    cursor: pointer
+    color: #ffab40
+    padding: 20px
+    transition: .2s all ease
+    &:hover
+      background-color: #546e7a
+.real
+  font-size: 35px
+  color: #000
+
+.modal-window
+  position: relative
+  width: 500px
+  height: 500px
+  margin: 0 auto
+  opacity: 0
+  background-color: #546e7a
+  border-radius: 5px
+  padding-top: 150px
+  .center-align
+    text-align: center
+    display: block
+    color: #fff
+  #close
+    font-size: 30px
+    position: absolute
+    top: -25px
+    right: -10px
+    cursor: pointer
+    color: #ffab40
+
+
+
+@import "media" // Always at the end
